@@ -1,3 +1,5 @@
+//! --- Day 2: Dive! ---
+
 use lazy_static::lazy_static;
 use regex::Regex;
 use twentyone::stdin::read_from_stdin;

@@ -1,3 +1,5 @@
+//! --- Day 1: Sonar Sweep ---
+
 use twentyone::stdin::read_from_stdin;
 
 fn main() {
