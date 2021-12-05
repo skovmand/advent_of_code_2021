@@ -1,7 +1,7 @@
 //! --- Day 3: Binary Diagnostic ---
 
 use std::cmp::Ordering;
-use twentyone::stdin::read_from_stdin;
+use twentyone::{stdin::read_from_stdin, util::transpose_vec};
 
 fn main() {
     let input = read_from_stdin().unwrap();
@@ -27,16 +27,6 @@ fn line_to_vec(line: &str) -> Vec<u8> {
             '1' => 1,
             c => panic!("Unknown character: '{}'", c),
         })
-        .collect()
-}
-
-// Consider copying this into a general module, or to implement it for Vec<Vec<T>>
-fn transpose_vec<T: Copy>(vec: Vec<Vec<T>>) -> Vec<Vec<T>> {
-    let length = vec[0].len();
-
-    // Scan the 2d vec columns one by one, emit a row for every column scanned vertically
-    (0..length)
-        .map(|index| vec.iter().map(|row| row[index]).collect())
         .collect()
 }
 
